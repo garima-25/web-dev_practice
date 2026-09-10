@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Page Design</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            width: 85%;
+            height: 630px;
+            margin: 40px auto;
+            background: #555555;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        /* Top Bar */
+        .top {
+            height: 110px;
+            background: #8d4032;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            gap: 35px;
+        }
+
+        .circle {
+            width: 75px;
+            height: 75px;
+            background: #d5f5e9;
+            border-radius: 100%;
+        }
+
+        .small-box {
+            width: 105px;
+            height: 40px;
+            background: #d5f5e9;
+        }
+
+        .search {
+            width: 350px;
+            height: 65px;
+            background: #d5f5e9;
+            border-radius: 40px;
+            margin-left: 0;
+        }
+
+        /* Left Side */
+        .side {
+            position: absolute;
+            width: 130px;
+            height: 420px;
+            background: #d5d5d5;
+            border-radius: 25px;
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .side-box {
+            width: 100%;
+            height: 60px;
+            border-bottom: 9px solid #eeeeee;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 160px;
+            padding-top: 25px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 35px;
+        }
+
+        .card {
+            width: 280px;
+            height: 180px;
+            background: #d5f5e9;
+            border-radius: 30px;
+        }
+
+        .text-row {
+            display: flex;
+            gap: 90px;
+            margin-top: 25px;
+        }
+
+        .text-box {
+            width: 180px;
+            height: 45px;
+            background: #d5f5e9;
+        }
+
+        .middle-box {
+            width: 180px;
+            height: 45px;
+            background: #d5f5e9;
+            margin: 40px auto;
+        }
+
+        /* Bottom Bar */
+        .bottom {
+            height: 110px;
+            background: #222222;
+            border-radius: 25px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            padding: 20px 60px;
+            gap: 85px;
+        }
+
+        .bottom-box {
+            width: 120px;
+            height: 40px;
+            background: #d5f5e9;
+        }
+
+        .bottom-big {
+            width: 280px;
+            height: 75px;
+            background: #d5f5e9;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- Top Bar -->
+        <div class="top">
+            <div class="circle"></div>
+
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+            <div class="small-box"></div>
+
+            <div class="search"></div>
+
+            <div class="circle"></div>
+        </div>
+
+
+        <!-- Left Side Bar -->
+        <div class="side">
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+            <div class="side-box"></div>
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="content">
+
+            <div class="cards">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+
+            <div class="text-row">
+                <div class="text-box"></div>
+                <div class="text-box"></div>
+                <div class="text-box"></div>
+            </div>
+
+            <div class="middle-box"></div>
+
+        </div>
+
+
+        <!-- Bottom Bar -->
+        <div class="bottom">
+            <div class="bottom-box"></div>
+            <div class="bottom-box"></div>
+            <div class="bottom-box"></div>
+
+            <div class="bottom-big"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

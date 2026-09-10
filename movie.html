@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fb;
+        }
+
+        h2{
+            margin-left: 50px;
+        }
+        h3{
+            margin-left: 50px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .card-container {
+            background-color: aliceblue;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-row: 100px 100px;
+            grid-row-gap:10px ;
+            padding: 30px 50px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            
+        }
+
+        .movie-card {
+            width: 230px;
+            border: 1px solid #ddd;
+            transition: scale 0.2s;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .movie-card:hover{
+            transform: scaleY(1.1);
+        }
+
+        .movie-image{
+            position: relative;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        
+        .promoted-tag{
+            position: absolute;
+            top: 10px;
+            left: 12px;
+            background-color: #6d28d9;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .movie-info {
+            padding: 14px 12px;
+        }
+
+        .movie-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .movie-details {
+            font-size: 14px;
+            color: #555;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Top Hindi movies near you</h2>
+
+    <div class="card-container">
+
+        <!-- Hanuman Ansh -->
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    Hanuman Ansh
+                </div>
+
+                <div class="movie-details">
+                    U | Hindi
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Mirzapur Card with Promoted Tag -->
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <span class="promoted-tag">Promoted</span>
+
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    Mirzapur: The Movie
+                </div>
+
+                <div class="movie-details">
+                    A | Hindi
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Toxic -->
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    Toxic: A Fairy Tale for Grown-ups
+                </div>
+
+                <div class="movie-details">
+                    A | Hindi and 1 more
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Awarapan 2 -->
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/AW_Poster-18591030-9548-11f1-b29d-8985d3d6c644.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    Awarapan 2
+                </div>
+
+                <div class="movie-details">
+                    UA16+ | Hindi
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <h3>Crowd favorite Activity</h3>
+     <div class="card-container">
+        <div class="movie-card">
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1772022739/empkmn8zlqpfo1xvc2ex.png">
+           
+            </div>
+            <div class="movie-info">
+                 <div class="movie-title">
+                    Smash | aria mall - gurugram
+                </div>
+
+                <div class="movie-details">
+                    $300 onwards
+                </div>
+            </div>
+
+
+        </div>
+         <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1769688166/utjl99stlcisbhb3zfxt.png">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    Iskate by rosaete
+                </div>
+
+                <div class="movie-details">
+                    $200 onwards
+                </div>
+
+            </div>
+
+        </div>
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1762156768/da4rngxll673gjcyudzy.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    the game palacio
+                </div>
+
+                <div class="movie-details">
+                    $200 onwards
+                </div>
+
+            </div>
+
+        </div>
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1771999200/t1xf8f9ciyzvemtxk4xl.png">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    f9 go carting
+                </div>
+
+                <div class="movie-details">
+                    $250 onwards
+                </div>
+
+            </div>
+
+        </div>
+         <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1776419000/g2baaf1hpd6uh5pimjos.jpg">
+            </div>
+
+            <div class="movie-info">
+
+                <div class="movie-title">
+                    timezone
+                </div>
+
+                <div class="movie-details">
+                   $250 onwards
+                </div>
+
+            </div>
+
+        </div>
+     
+
+     </div>
+
+
+</body>
+</html>
