@@ -379,7 +379,6 @@
             height: auto;
         }
 
-        .notification {}
 
         @media (max-width: 768px) {
             .cards-container {
@@ -435,149 +434,145 @@
 
         }
 
-        
-/* Hamburger button */
 
-.menu-btn {
-    display: none;
+        /* Hamburger button */
 
-    border: none;
-    background: none;
+        .menu-btn {
+            display: none;
 
-    font-size: 28px;
-    cursor: pointer;
-}
+            border: none;
+            background: none;
 
-
-/* Tablet */
-
-@media (max-width: 1000px) {
-
-    .nav-links {
-        gap: 3px;
-    }
-
-    .nav-links a {
-        padding: 8px 8px;
-        font-size: 13px;
-    }
-
-}
+            font-size: 28px;
+            cursor: pointer;
+        }
 
 
-/* Mobile */
+        /* Tablet */
 
-@media (max-width: 768px) {
+        @media (max-width: 1000px) {
 
-    header {
-        height: auto;
-        min-height: 70px;
+            .nav-links {
+                gap: 3px;
+            }
 
-        padding: 10px 15px;
+            .nav-links a {
+                padding: 8px 8px;
+                font-size: 13px;
+            }
 
-        flex-wrap: wrap;
-    }
-
-    .header-left {
-        gap: 10px;
-    }
-
-    .location {
-        padding-left: 10px;
-    }
-
-    .location-icon {
-        font-size: 20px;
-    }
-
-    .location strong {
-        font-size: 12px;
-    }
-
-    .location small {
-        font-size: 10px;
-    }
+        }
 
 
-    /* Show hamburger */
+        /* Mobile */
 
-    .menu-btn {
-        display: block;
+        @media (max-width: 768px) {
 
-        margin-left: auto;
-    }
+            header {
+                height: auto;
+                min-height: 70px;
 
+                padding: 10px 15px;
 
-    /* Hide navigation initially */
+                flex-wrap: wrap;
+            }
 
-    .nav-links {
-        display: none;
+            .header-left {
+                gap: 10px;
+            }
 
-        width: 100%;
+            .location {
+                padding-left: 10px;
+            }
 
-        flex-direction: column;
+            .location-icon {
+                font-size: 20px;
+            }
 
-        align-items: stretch;
+            .location strong {
+                font-size: 12px;
+            }
 
-        gap: 5px;
-
-        margin: 10px 0 0;
-    }
-
-
-    /* Show navigation when menu is opened */
-
-    .nav-links.show {
-        display: flex;
-    }
-
-
-    .nav-links a {
-        width: 100%;
-
-        text-align: center;
-
-        padding: 10px;
-    }
+            .location small {
+                font-size: 10px;
+            }
 
 
-    .header-right {
-        gap: 10px;
-    }
+            /* Show hamburger */
 
-    .search {
-        font-size: 24px;
-    }
+            .menu-btn {
+                display: block;
 
-    .profile {
-        width: 34px;
-        height: 34px;
-    }
-
-}
+                margin-left: auto;
+            }
 
 
-/* Small mobile */
+            /* Hide navigation initially */
 
-@media (max-width: 460px) {
+            .nav-links {
+                display: none;
 
-    .logo img {
-        width: 85px;
-    }
+                width: 100%;
 
-    .location {
-        gap: 5px;
-    }
+                flex-direction: column;
 
-    .header-right {
-        margin-left: 0;
-    }
+                align-items: stretch;
 
-}
+                gap: 5px;
+
+                margin: 10px 0 0;
+            }
 
 
+            /* Show navigation when menu is opened */
 
-    
+            .nav-links.show {
+                display: flex;
+            }
+
+
+            .nav-links a {
+                width: 100%;
+
+                text-align: center;
+
+                padding: 10px;
+            }
+
+
+            .header-right {
+                gap: 10px;
+            }
+
+            .search {
+                font-size: 24px;
+            }
+
+            .profile {
+                width: 34px;
+                height: 34px;
+            }
+
+        }
+
+
+        /* Small mobile */
+
+        @media (max-width: 460px) {
+
+            .logo img {
+                width: 85px;
+            }
+
+            .location {
+                gap: 5px;
+            }
+
+            .header-right {
+                margin-left: 0;
+            }
+
+        }
     </style>
 
 </head>
@@ -588,52 +583,52 @@
 
     <header class="header">
 
-    <div class="header-left">
+        <div class="header-left">
 
-        <div class="logo">
-            <img src="https://b.zmtcdn.com/data/edition_assets/17466982242413.svg" alt="logo">
-        </div>
-
-        <div class="location">
-            <span class="location-icon">⌖</span>
-
-            <div>
-                <strong>Gurugram</strong>
-                <small>Haryana</small>
+            <div class="logo">
+                <img src="https://b.zmtcdn.com/data/edition_assets/17466982242413.svg" alt="logo">
             </div>
+
+            <div class="location">
+                <span class="location-icon">⌖</span>
+
+                <div>
+                    <strong>Gurugram</strong>
+                    <small>Haryana</small>
+                </div>
+            </div>
+
         </div>
 
-    </div>
+        <!-- Hamburger button -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
 
-    <!-- Hamburger button -->
-    <button class="menu-btn" onclick="toggleMenu()">
-        ☰
-    </button>
+        <nav class="nav-links">
 
-    <nav class="nav-links">
+            <a href="#" class="active">For you</a>
+            <a href="#">Dining</a>
+            <a href="#">Movies</a>
+            <a href="#">Events</a>
+            <a href="#">Comedy</a>
+            <a href="#">Stores</a>
+            <a href="#">Activities</a>
+            <a href="#">Play</a>
 
-        <a href="#" class="active">For you</a>
-        <a href="#">Dining</a>
-        <a href="#">Movies</a>
-        <a href="#">Events</a>
-        <a href="#">Comedy</a>
-        <a href="#">Stores</a>
-        <a href="#">Activities</a>
-        <a href="#">Play</a>
+        </nav>
 
-    </nav>
+        <div class="header-right">
 
-    <div class="header-right">
+            <span class="search">⌕</span>
 
-        <span class="search">⌕</span>
+            <div class="profile">
+                ♙
+            </div>
 
-        <div class="profile">
-            ♙
         </div>
 
-    </div>
-
-</header>
+    </header>
     <!-- <header class="header">
 
         <div class="header-left">
