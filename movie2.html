@@ -7,7 +7,6 @@
     <title>Movie Booking</title>
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,7 +19,7 @@
             padding: 40px;
         }
 
-       
+
 
         .cards-container {
             display: grid;
@@ -30,7 +29,7 @@
         }
 
 
-       
+
 
         .movie-card {
             width: 230px;
@@ -43,7 +42,7 @@
             opacity: 0;
 
             transition: transform 0.3s ease,
-                        box-shadow 0.3s ease;
+                box-shadow 0.3s ease;
         }
 
 
@@ -139,7 +138,7 @@
             position: absolute;
 
             bottom: 130%;
-            left: 50%;
+            left: 70%;
 
             transform: translateX(-50%);
 
@@ -182,7 +181,7 @@
             cursor: pointer;
 
             transition: transform 0.2s ease,
-                        background-color 0.2s ease;
+                background-color 0.2s ease;
         }
 
 
@@ -192,7 +191,7 @@
         }
 
 
-       
+
 
         .notification {
             position: fixed;
@@ -227,6 +226,358 @@
 
         }
 
+        header {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 25px;
+
+            background-color: white;
+
+            border-bottom: 1px solid #eee;
+
+            font-family: sans-serif;
+        }
+
+
+        .header-left {
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .logo {
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .logo span {
+            display: block;
+
+            font-size: 7px;
+            letter-spacing: 1px;
+
+            text-align: center;
+        }
+
+
+        .location {
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+
+            padding-left: 15px;
+
+            border-left: 1px solid #ddd;
+        }
+
+        .location-icon {
+            font-size: 24px;
+            color: #6845e8;
+        }
+
+        .location strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+        .location small {
+            display: block;
+
+            font-size: 11px;
+            color: #666;
+        }
+
+
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+
+            color: #222;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            padding: 10px 14px;
+
+            border-radius: 20px;
+
+            transition: background-color 0.2s ease;
+        }
+
+
+
+        .nav-links .active {
+            background-color: #eee7ff;
+            color: #5935d5;
+        }
+
+
+
+        .nav-links a:hover {
+            background-color: #f2f2f2;
+        }
+
+
+
+        .header-right {
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+
+        .search {
+            font-size: 28px;
+
+            color: #5935d5;
+
+            cursor: pointer;
+        }
+
+
+        .profile {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background-color: #e5e7eb;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+        .logo img {
+            filter: invert();
+            width: 108px;
+            height: auto;
+        }
+
+        .notification {}
+
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 460px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .notification {
+            position: fixed;
+
+            top: 20px;
+            right: 20px;
+
+            padding: 15px 20px;
+
+            background-color: rgb(16, 183, 16);
+            color: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+            animation: notificationShow 2s ease forwards;
+        }
+
+        @keyframes notificationShow {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            80% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+        }
+
+        
+/* Hamburger button */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 3px;
+    }
+
+    .nav-links a {
+        padding: 8px 8px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        min-height: 70px;
+
+        padding: 10px 15px;
+
+        flex-wrap: wrap;
+    }
+
+    .header-left {
+        gap: 10px;
+    }
+
+    .location {
+        padding-left: 10px;
+    }
+
+    .location-icon {
+        font-size: 20px;
+    }
+
+    .location strong {
+        font-size: 12px;
+    }
+
+    .location small {
+        font-size: 10px;
+    }
+
+
+    /* Show hamburger */
+
+    .menu-btn {
+        display: block;
+
+        margin-left: auto;
+    }
+
+
+    /* Hide navigation initially */
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        margin: 10px 0 0;
+    }
+
+
+    /* Show navigation when menu is opened */
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    .nav-links a {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 10px;
+    }
+
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .search {
+        font-size: 24px;
+    }
+
+    .profile {
+        width: 34px;
+        height: 34px;
+    }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 460px) {
+
+    .logo img {
+        width: 85px;
+    }
+
+    .location {
+        gap: 5px;
+    }
+
+    .header-right {
+        margin-left: 0;
+    }
+
+}
+
+
+
+    
     </style>
 
 </head>
@@ -234,6 +585,100 @@
 
 <body>
 
+
+    <header class="header">
+
+    <div class="header-left">
+
+        <div class="logo">
+            <img src="https://b.zmtcdn.com/data/edition_assets/17466982242413.svg" alt="logo">
+        </div>
+
+        <div class="location">
+            <span class="location-icon">⌖</span>
+
+            <div>
+                <strong>Gurugram</strong>
+                <small>Haryana</small>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hamburger button -->
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav class="nav-links">
+
+        <a href="#" class="active">For you</a>
+        <a href="#">Dining</a>
+        <a href="#">Movies</a>
+        <a href="#">Events</a>
+        <a href="#">Comedy</a>
+        <a href="#">Stores</a>
+        <a href="#">Activities</a>
+        <a href="#">Play</a>
+
+    </nav>
+
+    <div class="header-right">
+
+        <span class="search">⌕</span>
+
+        <div class="profile">
+            ♙
+        </div>
+
+    </div>
+
+</header>
+    <!-- <header class="header">
+
+        <div class="header-left">
+
+            <div class="logo">
+                <img src="https://b.zmtcdn.com/data/edition_assets/17466982242413.svg" alt="logo">
+            </div>
+
+            <div class="location">
+                <span class="location-icon">⌖</span>
+
+                <div>
+                    <strong>Gurugram</strong>
+                    <small>Haryana</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="#" class="active">For you</a>
+            <a href="#">Dining</a>
+            <a href="#">Movies</a>
+            <a href="#">Events</a>
+            <a href="#">Comedy</a>
+            <a href="#">Stores</a>
+            <a href="#">Activities</a>
+            <a href="#">Play</a>
+
+        </nav>
+
+
+        <div class="header-right">
+
+            <span class="search">⌕</span>
+
+            <div class="profile">
+                ♙
+            </div>
+
+        </div>
+
+    </header> -->
 
     <div class="cards-container">
 
@@ -244,7 +689,7 @@
 
             <div class="movie-image">
 
-                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg";
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
                     alt="Mirzapur movie poster">
 
             </div>
@@ -324,8 +769,8 @@
 
             <div class="movie-image">
 
-                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg";
-                    alt="Movie poster">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    ; alt="Movie poster">
 
             </div>
 
