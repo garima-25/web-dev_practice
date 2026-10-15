@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB Tech LAB</title>
+    <style>
+        /* =========================================
+           Reset and Base Styles
+        ========================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #0f0f0f;
+            display: flex;
+            flex-direction: column;
+            /* min-height: 100vh; */
+        }
+
+        /* =========================================
+           1. Header Styles (Fixed at top)
+        ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ff0000; /* Red color similar to YouTube */
+            text-decoration: none;
+        }
+
+        .search-bar {
+            flex: 0 1 500px;
+            display: flex;
+            margin: 0 16px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* .search-bar input:focus {
+            border-color: #1c62b9;
+        } */
+
+        .profile-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #555;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           2. Sidebar Styles (Fixed left)
+        ========================================= */
+        aside {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            bottom: 40px; /* Leave space for the fixed footer */
+            width: 240px;
+            background-color: #ffffff;
+            padding-top: 12px;
+            /* overflow-y: auto; */
+            border-right: 1px solid #e5e5e5;
+            z-index: 999;
+        }
+
+        aside a {
+            display: block;
+            padding: 12px 24px;
+            color: #0f0f0f;
+            text-decoration: none;
+            font-size: 14px;
+            /* transition: background-color 0.2s; */
+        }
+
+        /* aside a:hover {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        } */
+
+        /* =========================================
+           3. Main Content Area (Responsive Grid)
+        ========================================= */
+        main {
+            margin-top: 56px;    /* Height of header */
+            margin-left: 240px;  /* Width of sidebar */
+            margin-bottom: 40px; /* Height of footer */
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .thumbnail-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #cccccc;
+            border-radius: 8px;
+            transition: opacity 0.2s;
+        }
+
+        /* .video-card:hover .thumbnail-placeholder {
+            opacity: 0.9;
+        } */
+
+        .video-title {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0f0f0f;
+            line-height: 1.4;
+        }
+
+        /* =========================================
+           4. Footer Styles (Fixed at bottom)
+        ========================================= */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #606060;
+            z-index: 1000;
+        }
+
+        /* =========================================
+           5. Responsiveness for smaller screens
+        ========================================= */
+        @media (max-width: 768px) {
+            aside {
+                width: 70px;
+            }
+            aside a {
+                padding: 12px 0;
+                text-align: center;
+                font-size: 10px;
+            }
+            main {
+                margin-left: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            aside {
+                display: none; /* Hide sidebar completely on mobile layout */
+            }
+            main {
+                margin-left: 0;
+                padding: 12px;
+            }
+            .search-bar {
+                display: none; /* Hide search bar if it overflows on tiny devices */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header -->
+    <header>
+        <a href="#" class="logo">MyTube</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="profile-icon"></div>
+    </header>
+
+    <!-- 2. Sidebar Layout -->
+    <aside>
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">Library</a>
+        <a href="#">History</a>
+        <a href="#">Watch Later</a>
+    </aside>
+
+    <!-- 3. Main Content Area -->
+    <main>
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 1</div>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 2</div>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 3</div>
+            </div>
+            <!-- Video 4 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 4</div>
+            </div>
+            <!-- Video 5 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 5</div>
+            </div>
+            <!-- Video 6 -->
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Title 6</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer>
+        <p>&copy; 2026 MyTube - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

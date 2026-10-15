@@ -1,0 +1,1 @@
+console.log("Hello, I am running js using script tag")

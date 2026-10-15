@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Dev</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: aliceblue;
+            color: black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            background-color: azure;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+
+        .logo{
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            text-decoration: none;
+        }
+
+        .search-bar{
+            margin: 0 16px;
+            flex: 0 1 500px;
+            display: flex;
+        }
+
+        .search-bar input{
+            padding: 8px 12px;
+            width: 100%;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .profile-icon{
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        aside{
+            position: fixed;
+            top: 56px;
+            bottom: 40px;
+            left: 0;
+            width: 240px;
+            background-color: #f5f5f5;
+            padding-top: 12px;
+            border-right: 1px solid #e5e5e5;
+            z-index: 999;
+        }
+
+        aside a{
+            display: block;
+            padding: 12px 24px;
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        main{
+            margin-top: 56px;
+            margin-left: 240px;
+            margin-bottom: 40px;
+            padding: 24px;
+        }
+
+        .video-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 16px;
+        }
+
+        .video-card{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .thumbnail-placeholder{
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #cccccc;
+            border-radius: 8px;
+        }
+
+        .video-title{
+            margin-top: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.4;
+            color: black;
+        }
+
+        footer{
+            position: fixed;
+            bottom: 0;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            background-color: #ffffff;
+            display: flex;
+            border-top: 1px solid #e5e5e5;
+            z-index: 1000;
+            font-size: 14px;
+        }
+
+        @media(max-width: 768px){
+            aside{
+                width: 70px;
+            }
+            aside a{
+                padding: 12px 0;
+                align-items: center;
+                font-size: 10px;
+            }
+            main{
+                margin-left: 70px;
+            }
+        }
+
+        @media(max-width: 480px){
+            aside{
+                display: none;
+            }
+            main{
+                margin-left: 0;
+                padding: 12px;
+            }
+            .search-bar{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">MyTube</a>
+        <div class="search-bar">
+            <input type="search" placeholder="Search">
+        </div>
+        <div class="profile-icon"></div>
+    </header>
+    <aside>
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Subcription</a>
+        <a href="#">Library</a>
+        <a href="#">History</a>
+        <a href="#">Watch Later</a>
+    </aside>
+    <main>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 1</div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 2</div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 3</div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 4</div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 5</div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail-placeholder"></div>
+                <div class="video-title">Video Tilte 6</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 All Rigths Are Reserved</p>
+    </footer>
+</body>
+</html>

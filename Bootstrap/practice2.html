@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Portal</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: aliceblue;
+            color: black;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: blue;
+            display: flex;
+            width: 100%;
+            color: white;
+            z-index: 1000;
+            padding: 12px;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .header-left{
+            display: flex;
+            padding: 14px;
+            gap: 15px;
+        }
+
+        #menu-toggle{
+            display: none;
+        }
+
+        .logo{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .hamburger{
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a{
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            margin-left: 12px;
+        }
+
+        aside{
+            position: fixed;
+            left: -100%;
+            padding-top: 20px;
+            top: 60px;
+            z-index: 999;
+            background-color: mediumblue;
+            color: white;
+            border: 1px solid #ececec;
+            width: 240px;
+            bottom: 0;
+        }
+
+        aside a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 15px 25px;
+        }
+
+        main{
+            margin-top: 60px;
+            padding: 24px;
+        }
+
+        #menu-toggle:checked ~ aside{
+            left: 0;
+        }
+
+        @media(min-width: 769px){
+            #menu-toggle:checked ~ main{
+                margin-left: 250px;
+            }
+        }
+        @media(max-width: 768px){
+            aside{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <header>
+        <div class="header-left">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <div class="logo">University Portal</div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Course</a>
+            <a href="#">profile</a>
+        </nav>
+    </header>
+    <aside>
+        <a href="#">Dashboard</a>
+        <a href="#">Course</a>
+        <a href="#">Setting</a>
+        <a href="#">Logout</a>
+    </aside>
+    <main>
+        <h2>Welcome to the University Dashboard</h2>
+        <p>This is your main content area. Resize the window or use the hamburger icon to see the responsive behavior.</p>
+    </main>
+</body>
+</html>

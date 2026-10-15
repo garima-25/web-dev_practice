@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest 2026</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+
+        /* HEADER */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: blue;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 12px 20px;
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+
+        /* SIDEBAR */
+
+        aside {
+            position: fixed;
+            top: 60px;
+            bottom: 0;
+            left: -100%;
+
+            width: 240px;
+            background-color: mediumblue;
+            padding-top: 20px;
+
+            z-index: 999;
+            transition: left 0.3s ease;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        aside a:hover {
+            background-color: blue;
+        }
+
+        /* OPEN SIDEBAR */
+
+        #menu-toggle:checked ~ aside {
+            left: 0;
+        }
+
+
+        /* MAIN CONTENT */
+
+        main {
+            margin-top: 60px;
+            padding: 30px;
+        }
+
+        main h1 {
+            margin-bottom: 10px;
+        }
+
+        main p {
+            margin-bottom: 25px;
+        }
+
+
+        /* EVENT CARDS */
+
+        .events {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px gray;
+        }
+
+        .event-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .event-card p {
+            margin-bottom: 15px;
+        }
+
+        .event-card button {
+            padding: 10px 15px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        /* DESKTOP */
+
+        @media (min-width: 769px) {
+
+            #menu-toggle:checked ~ main {
+                margin-left: 240px;
+            }
+
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 768px) {
+
+            aside {
+                width: 70px;
+            }
+
+            aside a {
+                padding: 15px 5px;
+                text-align: center;
+                font-size: 11px;
+            }
+
+            .events {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 480px) {
+
+            aside {
+                display: none;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .events {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Header -->
+    <header>
+
+        <div class="header-left">
+
+            <label for="menu-toggle" class="hamburger">
+                &#9776;
+            </label>
+
+            <div class="logo">
+                TechFest 2026
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">Schedule</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Sidebar -->
+    <aside>
+
+        <a href="#">Dashboard</a>
+        <a href="#">Events</a>
+        <a href="#">Participants</a>
+        <a href="#">Results</a>
+        <a href="#">Logout</a>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <h1>Welcome to TechFest 2026</h1>
+
+        <p>
+            Join our college technical festival and participate
+            in exciting coding, development and robotics events.
+        </p>
+
+
+        <div class="events">
+
+            <div class="event-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Build an attractive and responsive website
+                    using HTML and CSS.
+                </p>
+
+                <button>Register</button>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>Coding Challenge</h3>
+
+                <p>
+                    Solve interesting programming problems
+                    and test your coding skills.
+                </p>
+
+                <button>Register</button>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>Robotics</h3>
+
+                <p>
+                    Design and demonstrate an exciting
+                    robotics project.
+                </p>
+
+                <button>Register</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
