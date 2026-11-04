@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Q2 <script>
+        let num = 58342;
+        let reverse = 0;
+        let sum = 0;
+        while(num>0){
+            let digit = num%10;
+            reverse = reverse*10+digit;
+            sum= sum+digit;
+            num= Math.floor(num/10);
+        }
+        console.log("Reversed Number:", reverse);
+        console.log("Sum of Digit:", sum);
+    </script>
+
+</body>
+</html>
