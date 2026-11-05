@@ -8,11 +8,32 @@
 <body>
     <h1 id="title" class="heading">Welcome to learning DOM</h1>
     <p id="content">Hello World i am DOM</p>
+    <button id="change-btn">Change Heading</button>
+    <h2 id = "heading-2">List of 3CA CRS</h2>
+    <button id="add-cr-btn">Add crs</button>
 
     <script>
-        document.getElementById().style.backgroundColor
-        document.getElementsByClassName()
-        document.querySelectorAll()
+        // document.getElementById().style.backgroundColor
+        // document.getElementsByClassName()
+        // document.querySelectorAll()
+        
+        // Fixed the typo from 'documnet' to 'document'
+        const heading = document.querySelector('#title');
+        const changeButton = document.getElementById('change-btn');
+        
+        changeButton.addEventListener('click', function(){
+            heading.textContent = "heading is changed by click event";
+            heading.style.color = 'red';
+        });
+        function addCrs (CrName){
+            const ul = document.createElement('ul')
+            const li = document.createElement('li')
+            li.innerText = '${CrName}'
+            ul.appendChild(li)
+            console.log(ul)
+            document.body.appendChild(ul)
+        }
+        const addCrButton = document.getElementById('add-cr-btn')
     </script>
 </body>
 </html>
