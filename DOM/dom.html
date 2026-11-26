@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
         const heading = document.querySelector('#title');
         const changeButton = document.getElementById('change-btn');
         
-        changeButton.addEventListener('click', function(){
+        changeButton.addEventListener('mouseover', function(){
             heading.textContent = "heading is changed by click event";
             heading.style.color = 'red';
         });
@@ -32,8 +32,115 @@
             ul.appendChild(li)
             console.log(ul)
             document.body.appendChild(ul)
+            addEventListener('keydown', function(event){
+                if(event == 'Enter'){
+                    addCrs()
+                }
+            })
         }
-        const addCrButton = document.getElementById('add-cr-btn')
+        const addCrButton = document.getElementById('add-cr-btn');
+        addCrButton.addEventListener('click', function()){
+            console.log("event called"),
+            addCrs('yashika'),
+            addCrs('vaibhav'),
+            addCrs('vivek')
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="heading">Welcome to learning DOM</h1>
+    <p id="content">Hello World i am DOM</p>
+    <button id="change-btn">Change Heading</button>
+    
+    <h2 id="heading-2">List of 3CA CRS</h2>
+    <!-- Added a container to neatly hold the list items -->
+    <ul id="cr-list"></ul> 
+    <button id="add-cr-btn">Add crs</button>
+
+    <script>
+        // const heading = document.querySelector('#title');
+        // const changeButton = document.getElementById('change-btn');
+
+        // changeButton.addEventListener('mouseover', function(){
+        //     heading.textContent = "heading is changed by mouseover event";
+        //     heading.style.color = 'red';
+        // });
+
+        // // Get the list container once
+        // const crList = document.getElementById('cr-list');
+
+        // function addCrs(CrName) {
+        //     // Check if name is provided to prevent adding empty items
+        //     if(!CrName) return; 
+            
+        //     const li = document.createElement('li');
+        //     li.innerText = CrName; // Backticks `${CrName}` work too, but plain variable is safer here
+        //     crList.appendChild(li);
+        //     console.log("Added:", CrName);
+        // }
+
+        // // Fixed syntax error: removed the extra ')' after function()
+        // const addCrButton = document.getElementById('add-cr-btn');
+        // addCrButton.addEventListener('click', function() {
+        //     console.log("event called");
+        //     addCrs('yashika');
+        //     addCrs('vaibhav');
+        //     addCrs('vivek');
+        // });
+
+        // // Fixed keyboard event: kept outside the function so it only registers once
+        // window.addEventListener('keydown', function(event) {
+        //     if(event.key === 'Enter') {
+        //         addCrs(prompt("Enter a new CR name:"));
+        //     }
+        // });
+
+        const heading = document.querySelector('#title');
+const changeButton = document.getElementById('change-btn');
+
+changeButton.addEventListener('mouseover', function(){
+    heading.textContent = "heading is changed by mouseover event";
+    heading.style.color = 'red';
+});
+
+const crList = document.getElementById('cr-list');
+
+function addCrs(CrName) {
+    if(!CrName) return; 
+    
+    const li = document.createElement('li');
+    li.innerText = CrName;
+    crList.appendChild(li);
+    console.log("Added:", CrName);
+}
+
+const addCrButton = document.getElementById('add-cr-btn');
+addCrButton.addEventListener('click', function() {
+    console.log("event called");
+    addCrs('yashika');
+    addCrs('vaibhav');
+    addCrs('vivek');
+});
+
+// FIXED KEYBOARD PART: Changed window to document and added preventDefault()
+document.addEventListener('keydown', function(event) {
+    if(event.key === 'Enter') {
+        event.preventDefault(); // Stops the browser from clicking the active button again
+        const name = prompt("Enter a new CR name:");
+        addCrs(name);
+    }
+});
+
     </script>
 </body>
 </html>
