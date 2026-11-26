@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      margin: 0;
+      padding: 60px 20px;
+    }
+
+    .faq-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 18px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      color: #0066cc;
+    }
+
+    .icon {
+      font-size: 20px;
+      font-weight: normal;
+      margin-left: 16px;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is JavaScript?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        JavaScript is a programming language used to make web pages interactive and dynamic.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is jQuery?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        jQuery is a lightweight JavaScript library that simplifies HTML DOM manipulation, event handling, and animations.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is AJAX?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        AJAX stands for Asynchronous JavaScript and XML, allowing web pages to update data without reloading the entire page.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is the DOM?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        The DOM (Document Object Model) is a tree-like representation of a web page that JavaScript can read and modify.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is the difference between let and const?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        Variables declared with <code>let</code> can be reassigned later, while variables declared with <code>const</code> cannot be reassigned.
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".faq-question").click(function () {
+        // Toggle the answer right below the clicked question
+        $(this).next(".faq-answer").slideToggle(200);
+
+        // Toggle the + and - symbol
+        let icon = $(this).find(".icon");
+        icon.text(icon.text() === "+" ? "−" : "+");
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch users data from mock API : </h1>
+    <button id="load-btn">Load Data</button>
+    <ul id="user-list"></ul>
+
+    <script src="https://code.jquery.com/jquery-4.1.0.js" integrity="sha256-P4IlcYIfOn3YB0zga4ZJhrt/OdwjOrKSQsdxQykVcM4=" crossorigin="anonymous"></script>
+
+    <script>
+        $("#load-btn").click(function() {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                method: "GET",
+                success: function(users) {
+                    console.log(users);
+                    $("#user-list").empty();
+
+                    users.forEach(function(user) {
+                        $("#user-list").append(`<li>${user.name}</li>`);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Fetch users data from mock API : </h1>
+  <ul id="users-list"></ul>
+  <button id="load-btn">Load data</button>
+
+  <!-- Fixed closing quote on src and verified CDN link -->
+  <script src="https://code.jquery.com/jquery-4.1.0.js" integrity="sha256-P4IlcYIfOn3YB0zga4ZJhrt/OdwjOrKSQsdxQykVcM4=" crossorigin="anonymous"></script>
+
+  <script>
+    $("#load-btn").click(function(){
+      $.ajax({
+        // Replaced &quot; with a standard double quote "
+        url: "https://jsonplaceholder.typicode.com/users",
+        // method: "GET",
+        method: "POST",
+        data:{
+            name:"",
+            email:""
+        },
+        success: function(users){
+          console.log(users);
+          users.forEach(function(user) {
+            $("#users-list").append(`<li>${user.name}</li>`);
+          });
+        },
+        error: function(error){
+          console.log(error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

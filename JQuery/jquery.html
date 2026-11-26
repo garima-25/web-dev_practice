@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading" class="pageHeading">Welcome to learning JQuery</h1>
+    <button id="change-btn" class="btn">Click Me</button>
+
+    <!-- Exact CDN link to the jQuery JavaScript file -->
+    <script src="https://code.jquery.com/jquery-4.1.0.js" integrity="sha256-P4IlcYIfOn3YB0zga4ZJhrt/OdwjOrKSQsdxQykVcM4=" crossorigin="anonymous"></script>
+
+    <script>
+         // syntax: $(selector).action()
+        // $("#heading").text("welcome to 3CA");
+        // $(".pageHeading").css("color", "red");
+        // $("h1")
+
+        $(document).ready(function(){})
+        $("#change-btn").click(function() {
+            // $("#heading").hide()
+            $("#heading").text("welcome to 3CA");
+            $(".pageHeading").css("color", "red");
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading" class="pageHeading">Welcome to learning jquery</h1>
+    <button id="change-btn" class="btn">click me</button>
+    <p>helloo world this is 3CA class learning frontend developement</p>
+    <script
+      src="https://code.jquery.com/jquery-4.1.0.js&quot;
+      integrity="sha256-P4IlcYIfOn3YB0zga4ZJhrt/OdwjOrKSQsdxQykVcM4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // syntax: $(selector).action()
+      // $("#heading").text("welcome to 3CA")
+      // $(".pageHeading").css("color","red")
+
+      // $("h1")
+
+      // $("#change-btn").click(function(){
+      //     $("#heading").text("welcome to 3CA")
+      //     $(".pageHeading").css("color","red")
+
+      // })     hghhhuhiuhiuh;;;
+
+      $(document).ready(function () {
+        $("#change-btn").click(function () {
+          $("#heading").slideToggle();
+
+          $(".pageHeading").css("color", "red");
+        });
+      });
+    </script>
+  </body>
+</html> -->
